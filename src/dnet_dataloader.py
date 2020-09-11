@@ -89,8 +89,6 @@ class DamageNetDataset(Dataset):
         if torch.is_tensor(idx):
             idx = idx.tolist()
 
-        print('idx', idx)
-
         # Check to see if buildings is None
         with open(self.labels_list[idx]) as f:
             label = json.load(f)
@@ -129,10 +127,9 @@ class DamageNetDataset(Dataset):
         # plt.show()
 
         damage_value = chosen_building['properties']['subtype']
-        print(damage_value)
+        # print(damage_value)
 
         # Convert str in damage_value to a pytorch tensor
-        # label = torch.Tensor([0, 0, 0])
         if damage_value == 'no-damage':
             label = torch.Tensor([0, 0, 0])
         elif damage_value == 'minor-damage':
