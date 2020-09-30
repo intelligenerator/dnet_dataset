@@ -1,4 +1,5 @@
 # dnet_dataset
+
 Pytorch xView2 cropped house and damage value label loader
 
 ## Table of Contents
@@ -76,12 +77,13 @@ dataset = DamageNetDataset(images_dir='train/images', labels_dir='train/labels',
                                                         torchvision.transforms.Resize((75, 75)),
                                                         torchvision.transforms.ToTensor()]))
 
-# The Dataloader
+# the dataloader
 dataloader = torch.utils.data.DataLoader(dataset, batch_size=64, shuffle=True, num_workers=4)
 
 dataiter = iter(dataloader)
 images, labels = next(dataiter)
 ```
+
 see [test.py](./test.py)
 
 
@@ -98,9 +100,9 @@ see the [tags on this repository](https://github.com/intelligenerator/unet_datas
 
 ## Authors
 
-Boldizsar Zopcsak - [BoldizsarZopcsak](https://github.com/BoldizsarZopcsak)
-Henry Meyer - [Rapirkomet](https://github.com/rapirkomet)
-Ulysse McConnell - [umcconnell](https://github.com/umcconnell/)
+- Boldizsar Zopcsak - [BoldizsarZopcsak](https://github.com/BoldizsarZopcsak)
+- Henry Meyer - [Rapirkomet](https://github.com/rapirkomet)
+- Ulysse McConnell - [umcconnell](https://github.com/umcconnell/)
 
 
 See also the list of
